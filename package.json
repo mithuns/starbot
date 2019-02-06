@@ -17,6 +17,7 @@
     "url": "https://github.com/mattcreager"
   },
   "dependencies": {
+    "@slack/client": "^4.8.0",
     "body-parser": "^1.15.0",
     "botkit": "0.7.2",
     "dotenv": "^6.2.0",

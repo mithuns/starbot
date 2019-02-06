@@ -1,17 +1,18 @@
 
 'use strict'
-
+const { RTMClient } = require('@slack/client');
 const slack = require('slack')
 const _ = require('lodash')
 const config = require('./config')
 
-let bot = slack.rtm.client()
+const rtm = new RTMClient(config('SLACK_TOKEN'));
+rtm.start();
 
-bot.started((payload) => {
+/*rtm.started((payload) => {
   this.self = payload.self
-})
+})*/
 
-bot.message((msg) => {
+rtm.on('message', (message) => {
   if (!msg.user) return
   if (!_.includes(msg.text.match(/<@([A-Z0-9])+>/igm), `<@${this.self.id}>`)) return
 
@@ -30,4 +31,4 @@ bot.message((msg) => {
   })
 })
 
-module.exports = bot
+module.exports = rtm
