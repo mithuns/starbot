@@ -1,7 +1,11 @@
 {
-  "name": "starbot",
+  "name": "starbot-ms",
   "description": "Starbot is GitHub's trending open-source page, reincarnated as a Slack bot",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mithuns/starbot.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "start": "node ./src",
@@ -9,12 +13,12 @@
     "test": "standard"
   },
   "author": {
-    "email": "creager@heroku.com",
-    "name": "Matthew Creager",
-    "url": "https://twitter.com/matt_creager"
+    "email": "m.singh2005@gmail.com",
+    "name": "Mithun Singh",
+    "url": "https://twitter.com/robmit911"
   },
   "bugs": {
-    "url": "https://github.com/mattcreager"
+    "url": "https://github.com/mithuns/starbot"
   },
   "dependencies": {
     "@slack/client": "^4.8.0",
@@ -35,6 +39,6 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": "5.7.1"
+    "node": "10.15.0"
   }
 }
